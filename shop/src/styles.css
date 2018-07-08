@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: "Helvetica";
+    font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 200;
+}
+
+p, span, li {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 200;
+}
+
+main {
+    padding: 24px;
+}
+
+.basket {
+    position: relative;
+}
+
+.basket button {
+    background: cornflowerblue;
+    border-radius: 4px;
+    border: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 24px;
+    padding-right: 36px;
+    position: relative;
+    outline: none;
+}
+
+.basket button.active {
+    background: darkblue;
+}
+
+.basket__counter {
+    align-content: center;
+    align-items: center;
+    border-radius: 90px;
+    background: darkred;
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    position: absolute;
+    right: 8px;
+    width: 24px;
+}
+
+.basket__list {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    padding: 24px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 300px;
+}
+
+.basket__list h4 {
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin: 0 0 8px;
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+.basket__list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.basket__list li {
+    color: #333;
+    list-style: none;
+}
+
+/*flex rules*/
+
+[flex] {
+    display: flex;
+}
+
+[flex-row] {
+    display: flex;
+    flex-direction: row;
+}
+
+[flex-column] {
+    display: flex;
+    flex-direction: column;
+}
+
+[Xleft] {
+    justify-content: flex-start;
+}
+
+[Xright] {
+    justify-content: flex-end;
+}
+
+[Ycenter] {
+    align-items: center;
+    align-content: center;
+}
+
+[space-between] {
+    justify-content: space-between;
+}

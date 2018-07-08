@@ -1,0 +1,19 @@
+header.main
+{
+    background: lightblue;
+    color: white;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 8px 24px;
+}
+
+section {
+    margin-bottom: 24px;
+}
+

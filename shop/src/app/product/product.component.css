@@ -1,0 +1,45 @@
+:host {
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 24px;
+}
+
+.product__title {
+    background: lightgoldenrodyellow;
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.product__description {
+    padding: 8px 0;
+    border-top: 1px dotted rgba(0, 0, 0, 0.2);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    min-height: 40px;
+}
+
+.product button {
+    background: yellowgreen;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
+    width: 100%;
+}
+.product button[disabled] {
+    background: lightgray;
+}
+
+.product__name {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product__price {
+    font-size: 24px;
+    font-weight: bold;
+
+}

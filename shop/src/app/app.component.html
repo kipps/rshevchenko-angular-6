@@ -1,1 +1,32 @@
-<app-product-component></app-product-component>
+<header class="main" flex-row space-between Ycenter>
+    <h1>Welcome to the best shop!</h1>
+    <div class="basket" *ngIf="basketProducts.length > 0">
+        <button flex-row Ycenter class="basket__button" (click)="toggleBoughtList()" [ngClass]="{'active':isShowList}">
+            Show My Buying
+            <i class="material-icons">
+                shopping_cart
+            </i>
+            <span class="basket__counter">{{basketProducts.length}}</span>
+        </button>
+        <div *ngIf="isShowList" class="basket__list">
+            <h4>You bought:</h4>
+            <ul>
+                <li *ngFor="let item of basketProducts">
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+<main>
+    <article>
+        <header>
+            <h2>Counter of products: {{products.length}}</h2>
+        </header>
+        <app-product-list></app-product-list>
+    </article>
+</main>
+<footer>
+    <p>Our phone is 8 900 998 8388</p>
+</footer>

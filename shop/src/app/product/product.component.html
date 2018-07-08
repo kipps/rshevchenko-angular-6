@@ -1,0 +1,13 @@
+<div class="product">
+    <p class="product__name">{{product.name}}</p>
+    <p class="product__description">{{product.description}}</p>
+    <p class="product__price">{{product.price | currency:'USD'}}</p>
+
+    <p *ngIf="product.isAvailable">It's available</p>
+    <p *ngIf="!product.isAvailable">It's not available</p>
+
+    <button (click)="buy(product)" [disabled]="product.status">
+        <span *ngIf="!product.status">Buy</span>
+        <span *ngIf="product.status">In the basket</span>
+    </button>
+</div>
