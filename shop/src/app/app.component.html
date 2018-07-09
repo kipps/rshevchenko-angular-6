@@ -24,7 +24,9 @@
         <header>
             <h2>Counter of products: {{products.length}}</h2>
         </header>
+
         <app-product-list></app-product-list>
+        <app-cart *ngIf="basketProducts.length > 0"></app-cart>
     </article>
 </main>
 <footer>
