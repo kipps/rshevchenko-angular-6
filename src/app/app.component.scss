@@ -1,0 +1,54 @@
+@import "../assets/styles/config/index";
+@import "../assets/styles/helpres/helpers";
+
+// Components style
+
+.AppComponent {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  &-header {
+    @extend %indents--main;
+    background: map_get($bg, header);
+    color: white;
+  }
+  &-container {
+    @extend %indents--main;
+  }
+  &-footer {
+    @extend %indents--main;
+    background: map_get($bg, footer);
+    color: white;
+  }
+  &-nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+
+        list-style: none;
+        margin: -24px 0;
+        transition: all 200ms;
+        &.active, &:hover{
+          background: rgba(255, 255, 255, .2);
+        }
+        a {
+          align-items: center;
+          align-content: center;
+          color: white;
+          display: flex;
+          justify-content: center;
+          height: 128px;
+          padding: 16px;
+          text-align: center;
+          min-width: 100px;
+          &:hover, &:focus, &:active, &:visited {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

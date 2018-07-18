@@ -1,0 +1,18 @@
+<div class="Product" *ngIf="product && product.cartCount > 0, else nothing">
+    <img [src]="product.imgUrl" alt="img">
+    <p *ngIf="!update" class="text-center">{{product.name}}</p>
+    <p *ngIf="!update" class="text-center">Products count: {{product.cartCount}}</p>
+    <div class="Product-updateForm" *ngIf="update">
+        <input type="text" [(ngModel)]="product.name">
+    </div>
+    <div flex-row>
+        <button *ngIf="!update" class="btn btn-warning" (click)="updateProduct()">Edit</button>
+        <button *ngIf="update"  class="btn btn-warning" (click)="saveUpdates()">Save</button>
+        <button class="btn btn-danger" (click)="removeFromCart(product)">Delete</button>
+    </div>
+
+</div>
+<ng-template #nothing>
+    <p>Nothing here!</p>
+</ng-template>
+

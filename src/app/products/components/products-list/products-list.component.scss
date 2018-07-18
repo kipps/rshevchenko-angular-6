@@ -1,0 +1,15 @@
+@import "~assets/styles/config/index";
+@import "~assets/styles/helpres/helpers";
+
+// Components style
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.ProductsList{
+  header{
+    margin-bottom: 32px;
+  }
+}

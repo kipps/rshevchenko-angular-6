@@ -1,34 +1,46 @@
-<header class="main" flex-row space-between Ycenter>
-    <h1>Welcome to the best shop!</h1>
-    <div class="basket" *ngIf="basketProducts.length > 0">
-        <button flex-row Ycenter class="basket__button" (click)="toggleBoughtList()" [ngClass]="{'active':isShowList}">
-            Show My Buying
-            <i class="material-icons">
-                shopping_cart
-            </i>
-            <span class="basket__counter">{{basketProducts.length}}</span>
-        </button>
-        <div *ngIf="isShowList" class="basket__list">
-            <h4>You bought:</h4>
-            <ul>
-                <li *ngFor="let item of basketProducts">
-                    {{item.name}}
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</header>
-<main>
-    <article>
-        <header>
-            <h2>Counter of products: {{products.length}}</h2>
+<div class="AppComponent">
+    <div>
+        <header class="AppComponent-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="AppComponent-headerBrand">
+                            <h1>Angular Shop</h1>
+                            <span>We are keen on your products!</span>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <nav class="AppComponent-nav">
+                            <ul flex-row end>
+                                <li routerLinkActive="active">
+                                    <a routerLink="/home">Products</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/cart">Cart</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/order">Order</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </header>
+        <main class="AppComponent-container">
+            <div class="container-fluid">
+                <router-outlet
+                        (activate)='onActivate($event)'
+                        (deactivate)='onDeactivate($event)'>
+                </router-outlet>
+                <!-- Routed views go here -->
+            </div>
+        </main>
+    </div>
+    <footer class="AppComponent-footer">
+        <div class="container-fluid">
+            Copy by Roman Shevchenko | Angular Work Shop
+        </div>
+    </footer>
+</div>
 
-        <app-product-list></app-product-list>
-        <app-cart *ngIf="basketProducts.length > 0"></app-cart>
-    </article>
-</main>
-<footer>
-    <p>Our phone is 8 900 998 8388</p>
-</footer>

@@ -1,0 +1,13 @@
+<article class="ProductsList">
+  <header>
+    <h2>The list of our products <b>({{products.length}})</b>:</h2>
+  </header>
+  <section class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-product [product]="product" (boughtProduct)="addToCart($event)"></app-product>
+    </div>
+  </section>
+  <footer>
+
+  </footer>
+</article>

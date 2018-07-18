@@ -1,0 +1,32 @@
+<article class="ProductsList">
+    <header>
+        <p>The list of products in your cart <b>({{products.length}})</b>:</p>
+        <h2>Total cost is: {{cost | currency:'USD'}}</h2>
+    </header>
+    <section class="row" *ngIf="products.length > 0; else templateName">
+            <div class="col-md-4" *ngFor="let product of products">
+                <div class="CartProduct">
+                    <div class="CartProduct-header">
+                        <img [src]="product.imgUrl" alt="">
+                    </div>
+                    <p class="text-center">{{product.name}}</p>
+                    <p class="text-center">Products count: {{product.cartCount}}</p>
+                </div>
+            </div>
+    </section>
+    <ng-template #templateName>
+        <div class="row">
+            <div class="col-md-12">
+                <p>You don't have any products yet...</p>
+            </div>
+        </div>
+    </ng-template>
+    <footer *ngIf="products.length > 0">
+        <div class="row">
+            <div class="col-md">
+                <p>You can change or delete this product</p>
+                <app-cart-item></app-cart-item>
+            </div>
+        </div>
+    </footer>
+</article>

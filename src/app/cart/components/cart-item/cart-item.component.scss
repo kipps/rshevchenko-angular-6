@@ -1,0 +1,30 @@
+@import "~assets/styles/config/index";
+@import "~assets/styles/helpres/helpers";
+
+// Components style
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+img{
+  width: 100%;
+}
+
+.Product {
+  max-width: 300px;
+  width: 100%;
+  > div {
+    button:first-child {
+      margin-right: 16px;
+    }
+  }
+  &-updateForm {
+    padding: 24px 0;
+    input {
+      outline: none;
+      width: 100%;
+    }
+  }
+}

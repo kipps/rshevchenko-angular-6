@@ -1,0 +1,23 @@
+@import "~assets/styles/config/index";
+@import "~assets/styles/helpres/helpers";
+
+// Components style
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+img {
+  width: 100%;
+}
+
+header {
+  margin-bottom: 32px;
+}
+
+footer {
+  border-top: 1px solid lightgray;
+  padding-top: 24px;
+}

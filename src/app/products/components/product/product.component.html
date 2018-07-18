@@ -1,0 +1,23 @@
+<div class="Product">
+    <header [ngStyle]="{'background-image': 'url(' + product.imgUrl + ')' }">
+        <span>{{product.name}}</span>
+    </header>
+    <div class="Product-body">
+        <p>{{product.description}}</p>
+        <p *ngIf="!product.isAvailable">It's not available</p>
+        <p *ngIf="product.isAvailable">
+            <small>Quantity in Stock <b>{{product.count}}</b></small>
+        </p>
+        <div>
+            <b>Price: {{product.price | currency:'USD'}}</b>
+        </div>
+    </div>
+    <footer>
+        <button class="btn"
+                [ngClass]="{'btn-success': product.isAvailable, 'btn-light': !product.isAvailable }"
+                (click)="buy(product)" [disabled]="!product.isAvailable">
+            <span *ngIf="product.isAvailable">Buy</span>
+            <span *ngIf="!product.isAvailable ">You can't buy it</span>
+        </button>
+    </footer>
+</div>

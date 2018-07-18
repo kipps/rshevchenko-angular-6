@@ -1,8 +1,0 @@
-<section>
-  <header>
-    <h4 class="product__title">The list of products</h4>
-  </header>
-  <div class="products-list">
-    <app-product class="product" *ngFor="let item of products" [product]="item" (boughtProduct)="onBoughtProduct($event)"></app-product>
-  </div>
-</section>
